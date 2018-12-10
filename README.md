@@ -1,7 +1,7 @@
 # leetcode_answer
 开始准备找实习了，开始刷[leetcode](https://leetcode-cn.com/problemset/all/)
 
-第一题，[两数之和](question1_两数之和.cpp)  
+第一题:[两数之和](question1_两数之和.cpp)  
 第二题:[两数相加](question2_计算两数之和.cpp)  
 第三题:[最长相同子串](question3_最长相同子串.cpp)  
 第四题:[两个字符串的最小值](question4_两个字符串的最小值.cpp)  
