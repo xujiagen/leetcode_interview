@@ -1,5 +1,10 @@
 /*
 四数之和
+下面这个程序在编写的过程中遇到的问题就是
+１、输出可能的结果可能少一个
+２．输出可能的结果可能多一个
+少一个主要是因为结果边界条件不是很清楚
+多一个主要是没有进行重复项的跳过
 */
 
 #include <iostream>
@@ -28,11 +33,13 @@ public:
         {
             for(int left=0;left<nums.size()-3;left++)//1
             {
-                //if(left>0 && nums[left]==nums[left-1])
-                //    continue;
+                if(left>0 && nums[left]==nums[left-1])
+                    continue;
                 //这个元素如果重复出现，直接跳过，只要判断过一次，就不需要判断第二次
                 for(int l=left+1;l<nums.size()-2;l++)//2
                 {
+                    if(l>left+1 && nums[l]==nums[l-1])
+                        continue;
                     int temp_target=target-nums[l]-nums[left];
                     int mid=l+1,right=nums.size()-1;
                     while(mid<right)
@@ -42,14 +49,15 @@ public:
                         if(nums[mid]+nums[right]==temp_target)
                         {
                             std::vector<int> vec_int;
-                            int temp_left=nums[left],temp_l=nums[l],temp_mid=nums[mid],temp_right=nums[right];
                             vec_int.push_back(nums[left]);
                             vec_int.push_back(nums[l]);
                             vec_int.push_back(nums[mid]);
                             vec_int.push_back(nums[right]);
                             vec_vec_int.push_back(vec_int);
-                            while(mid<right && nums[++mid]==temp_mid);
-                            while(mid<right && nums[right--]==temp_right);
+                            while(mid<right && nums[mid+1]==nums[mid]) mid++;
+                            while(mid<right && nums[right-1]==nums[right]) right--;
+                            mid++;
+                            right--;
                         }
                         else if(nums[mid]+nums[right]<temp_target)
                             mid++;
