@@ -1,5 +1,6 @@
 # leetcode_answer
 开始准备找实习了，开始刷[leetcode](https://leetcode-cn.com/problemset/all/)
+环境:程序基本上都是在ubuntu上面写的，同时leetcode的编程环境好像是-std=c++11
 
 第一题:[两数之和](question1_两数之和.cpp)  
 第二题:[两数相加](question2_计算两数之和.cpp)  
@@ -19,5 +20,5 @@
 第十六题:[最接近的三个元素之和](question16_最接近的三个元素之和.cpp)  
 第十七题:[电话号码的字母组合](question17_电话号码的字母组合.cpp)  
 第十八题:[四数之和](question18_四数之和.cpp)  
-第十九题:[删除链表的倒数第N个节点](question19_删除链表的倒数第Ｎ个节点.cpp)
-
+第十九题:[删除链表的倒数第N个节点](question19_删除链表的倒数第Ｎ个节点.cpp)  
+第二十题:[有效的括号](question20_有效的括号.cpp)  
