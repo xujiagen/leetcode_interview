@@ -1,7 +1,7 @@
 # leetcode_answer
-开始准备找实习了，开始刷[leetcode](https://leetcode-cn.com/problemset/all/)
-leetcode上面的代码量实在是太多了，现阶段是先刷剑指offer两个补充着刷
-环境:程序基本上都是在ubuntu上面写的，同时leetcode的编程环境好像是-std=c++11
+开始准备找实习了，开始刷[leetcode](https://leetcode-cn.com/problemset/all/)  
+leetcode上面的代码量实在是太多了，现阶段是先刷剑指offer两个补充着刷  
+环境:程序基本上都是在ubuntu上面写的，同时leetcode的编程环境好像是-std=c++11  
 
 ### leetcode
 第一题:[两数之和](leetcode/question1_两数之和.cpp)  
