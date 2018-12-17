@@ -58,6 +58,13 @@ class solution
         {
             iter->resize(s.size()+1);
         }
+        for(int i=0;i<s.size()+1;i++)
+        {
+            for(int j=0;j<s.size()+1;j++)
+            {
+                int_vec_vec[i][j]=
+            }
+        }
 
     }
 };
