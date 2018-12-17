@@ -1,5 +1,6 @@
 # leetcode_answer
 开始准备找实习了，开始刷[leetcode](https://leetcode-cn.com/problemset/all/)
+leetcode上面的代码量实在是太多了，现阶段是先刷剑指offer两个补充着刷
 环境:程序基本上都是在ubuntu上面写的，同时leetcode的编程环境好像是-std=c++11
 
 ### leetcode
@@ -27,4 +28,4 @@
 第二十二题:[括号生成](leetcode/question22_括号生成.cpp)
 
 ### 剑指offer
-第三题:[二维数组中的查找](剑指offer/剑指offer第三题_二维数组中的查找.cpp)
+第三题:[二维数组中的查找](剑指offer/剑指offer第三题_二维数组中查找.cpp)
