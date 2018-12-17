@@ -23,13 +23,11 @@ public:
         {
             mid=i+1,right=nums.size()-1;//2,3
             int temp_target=target-nums[i];//99
-            std::cout<<i<<"\t"<<std::endl;
             while(mid<right)
             {
                 if(std::abs(temp_target-nums[mid]-nums[right])<std::abs(target-min))
                 {
                     min=nums[i]+nums[mid]+nums[right];
-                    std::cout<<i<<"\t"<<temp_target<<"\t"<<nums[mid]<<"\t"<<nums[right]<<std::endl;
                 }
                 if(nums[mid]+nums[right]==temp_target)
                     return target;
