@@ -1,4 +1,5 @@
 //题目的地址，计算两个数字的和，同时这个数据是保存在链表里面
+/*
 #include<iostream>
 #include<vector>
 
@@ -142,5 +143,45 @@ class Solution
             //上面这一行判断主要是这个链表可能已经计算完了，但是累加之后还有数
         }
         return first->next;
+    }
+};
+
+
+ */
+
+#include<iostream>
+#include<vector>
+#include<string>
+
+using namespace std;
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        if(!l1) return l2;
+        if(!l2) return l1;
+        int add=0;
+        ListNode* top=new ListNode(0);
+        ListNode* first=top;
+        while(l1 || l2 || add){
+            if(l1){
+                add+=l1->val;
+                l1=l1->next;
+            }
+            if(l2){
+                add+=l2->val;
+                l2=l2->next;
+            }
+            first->next=new ListNode(add%10);
+            first=first->next;
+            add/=10;
+        }
+        return top->next;
     }
 };

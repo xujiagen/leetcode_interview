@@ -106,3 +106,25 @@ class Solution
         }
         return result;
     }
+};
+
+class Solution{
+    public:
+    std::vector<int> twoSum(std::vector<int>& nums,int target)
+    {
+        std::vector<int> vec_int;
+        if(!nums.size()) return vec_int;
+        std::map<int,int> tmpmap;
+        for(int i=0;i<nums.size();i++)
+            tmpmap[nums[i]]=i;//第一个变量表示的是这个值，第二个值表示的是这个值所在的标签
+        for(int i=0;i<nums.size();i++)
+        {
+            if(tmpmap.count(target-nums[i])!=0 && tmpmap[target-nums[i]]!=i){
+                vec_int.push_back(i);
+                vec_int.push_back(tmpmap[target-nums[i]]);
+                return vec_int;
+            }
+        }
+        return vec_int;
+    }
+};
