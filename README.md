@@ -1,6 +1,11 @@
 # leetcode_interview
+现在已经是第二个是实习了，感谢在实习过程中遇到的mentor,教会了我很多东西！
+
+之前的方向是slam,但是现在的方向是c++,所以刷题的代码还是按照c++为主要语言
+
+代码里面有很多不规范code,后面重新刷题的时候会修改之前的错误，整体按照谷歌代码规范进行命名
 开始准备找实习了，开始刷[leetcode](https://leetcode-cn.com/problemset/all/)   
-环境:程序基本上都是在ubuntu上面写的，同时leetcode的编程环境好像是-std=c++11  
+代码执行的环境是ubuntu,建议编写CMakeLists进行编程，因为g++好像对<>, auto, lambda支持不是很好，所以建议通过CMakeLists进行编译运行．
 
 剑指offer可以在牛客网上面在线刷题:[牛客网_剑指offer](https://www.nowcoder.com/ta/coding-interviews)
 
@@ -136,3 +141,7 @@
 是在剑指offer里面的四个题
 ```
 
+### momenta面试题
+```
+内部的编程题，一般会给一个基于CMakeLists的工程过来，整体难度适中，对三维运行理解要深一点
+```
