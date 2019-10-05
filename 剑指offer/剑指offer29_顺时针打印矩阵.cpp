@@ -6,6 +6,7 @@
 
 using namespace std;
 
+/*
 class Solution {
 public:
     vector<int> printMatrix(vector<vector<int> > matrix) 
@@ -59,6 +60,63 @@ public:
                 int_vec.push_back(matrix[i][col]);
             return;
         }
+    }
+};
+*/
+
+class Solution {
+public:
+    vector<int> printMatrix(vector<vector<int> > matrix) 
+    {
+        std::cout<<"hello"<<std::endl;
+        std::vector<int> vec_int;
+        int rows=matrix.size()-1;
+        if(!rows)
+            return vec_int;
+        int cols=matrix[0].size()-1;
+        if(!cols)
+            return vec_int;
+        push_into_vec(matrix,0,rows,0,cols,vec_int);
+        return vec_int;
+        //下面是rows,cols都是有效的这种情况
+        
+    }
+    
+    void push_into_vec(std::vector<std::vector<int> > &matrix,int row,int rows,int col,int cols,std::vector<int>& vec_int)
+    {
+        std::cout<<"row:"<<row<<" "<<"col:"<<col<<"rows:"<<rows<<" "<<"cols:"<<cols<<std::endl;
+        if(rows-row==0)
+        {
+            for(int i=col;i<=cols;i++)
+                vec_int.push_back(matrix[row][i]);
+            return;
+        }
+        if(cols-col==0)
+        {
+            for(int i=row;i<=rows;i++)
+                vec_int.push_back(matrix[i][col]);
+            return;
+        }
+        for(int i=col;i<=cols;i++)
+        {
+            vec_int.push_back(matrix[row][i]);
+        }
+        for(int i=row+1;i<=rows;i++)
+        {
+            vec_int.push_back(matrix[i][cols]);
+        }
+        for(int i=cols-1;i>=col;i--)
+        {
+            vec_int.push_back(matrix[rows][i]);
+        }
+        for(int i=rows-1;i>row;i--)
+        {
+            vec_int.push_back(matrix[i][col]);
+        }
+        //if(rows-1<row+1 || cols-1<col+1)
+        //    return;
+        //else
+            push_into_vec(matrix,row+1,rows-1,col+1,cols-1,vec_int);
     }
 };
 

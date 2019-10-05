@@ -17,6 +17,7 @@ struct ListNode
 	}
 };
 
+/*
 class Solution {
 public:
     ListNode* FindFirstCommonNode( ListNode* pHead1, ListNode* pHead2) 
@@ -63,6 +64,39 @@ public:
             top1=top1->next;
             top2=top2->next;
         }
+        return top1;
+    }
+};
+*/
+
+class Solution {
+public:
+    ListNode* FindFirstCommonNode( ListNode* pHead1, ListNode* pHead2) 
+    {
+        //计算两个链表的长度
+        if(!pHead1)
+            return pHead1;
+        if(!pHead2)
+            return pHead2;
+        
+        int length1=0;
+        int length2=0;
+        ListNode* top1=pHead1,*top2=pHead2;
+        while(top1) top1=top1->next,length1++;
+        while(top2) top2=top2->next,length2++;
+        if(length1>=length2)
+            return handle(pHead1,pHead2,length1,length2);
+        else
+            return handle(pHead2,pHead1,length2,length1);
+        
+    }
+    
+    ListNode* handle(ListNode* pHead1,ListNode* pHead2,int length1,int length2)
+    {
+        int size=length1-length2;
+        ListNode* top1=pHead1,*top2=pHead2;
+        while(size--) top1=top1->next;
+        while(top1!=top2) top1=top1->next,top2=top2->next;
         return top1;
     }
 };

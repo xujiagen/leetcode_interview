@@ -1,3 +1,6 @@
+/*
+34512
+*/
 class Solution {
 public:
     int minNumberInRotateArray(vector<int> rotateArray) 

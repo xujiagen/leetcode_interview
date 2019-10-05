@@ -15,7 +15,7 @@ void print(std::vector<int> int_vec)
         std::cout<<int_vec[i]<<"\t";
     std::cout<<std::endl;
 }
-
+/*
 class Solution
 {
   public:
@@ -40,6 +40,33 @@ class Solution
         }
        // print(int_vec);
         return int_vec;
+    }
+};
+*/
+
+class Solution {
+public:
+    vector<int> multiply(const vector<int>& A) 
+    {
+        std::vector<int> vec_ans;
+        if(!A.size()) return vec_ans;
+        std::vector<int> vec_left(A.size(),1);
+        print(vec_left);
+        std::vector<int> vec_right(A.size(),1);
+        print(vec_right);
+        vec_ans.resize(A.size());
+        for(int i=1;i<A.size();i++)
+        {
+            vec_left[i]=vec_left[i-1]*A[i-1];
+            vec_right[A.size()-i-1]=vec_right[A.size()-i]*A[A.size()-i];
+            std::cout<<i<<" "<<vec_left[i]<<" "<<vec_right[A.size()-i-1]<<std::endl;
+        }
+
+        print(vec_left);
+        print(vec_right);
+        for(int i=0;i<A.size();i++)
+            vec_ans[i]=vec_left[i]*vec_right[i];
+        return vec_ans;
     }
 };
 

@@ -18,6 +18,7 @@ struct RandomListNode {
     }
 };
 
+/*
 class Solution 
 {
 public:
@@ -70,6 +71,52 @@ public:
     }
     
 };
+*/
+
+class Solution {
+public:
+    RandomListNode* Clone(RandomListNode* pHead)
+    {
+        if(!pHead)
+            return NULL;
+        RandomListNode* top=pHead;
+        RandomListNode* second;
+        RandomListNode* third;
+        while(top)
+        {
+            second=new RandomListNode(top->label);
+            third=top->next;
+            top->next=second;
+            second->next=third;
+            top=top->next->next;
+        }
+        
+        //上面基本上将节点都复制了一遍，显示开始指向随机指针
+        top=pHead;
+        second=top->next;
+        while(top)
+        {
+            second->random=top->random->next;
+            top=top->next->next;
+            second=second->next->next;
+        }
+        
+        //下面开始将两个链表分开
+        top=pHead;
+        second=top->next;
+        third=second;
+        while(top)
+        {
+            top->next=second->next;
+            second->next=top->next->next;
+            top=top->next;
+            second=second->next;
+        }
+        return third;
+    }
+};
+//上面这一段代码是2019031６号写的，感觉没有什么问题，但是在牛客网上面显示递归的层数比较多
+
 
 int main()
 {

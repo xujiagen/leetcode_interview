@@ -19,11 +19,11 @@ public:
         
         int small=1;
         int big=2;
-        int middle=(1+sum)/2;
+        int middle=(1+sum)/2;//50
 
-        int current_sum=small+big;
+        int current_sum=small+big;//3
 
-        while(small<middle)
+        while(small<middle)//
         {
             if(current_sum==sum)
                 push(int_vec_vec,small,big);
