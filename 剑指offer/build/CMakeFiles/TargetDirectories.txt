@@ -1,0 +1,3 @@
+/home/xujiiagen/Dropbox/project_get_from_github/leetcode_interview/剑指offer/build/CMakeFiles/edit_cache.dir
+/home/xujiiagen/Dropbox/project_get_from_github/leetcode_interview/剑指offer/build/CMakeFiles/rebuild_cache.dir
+/home/xujiiagen/Dropbox/project_get_from_github/leetcode_interview/剑指offer/build/CMakeFiles/offer.dir

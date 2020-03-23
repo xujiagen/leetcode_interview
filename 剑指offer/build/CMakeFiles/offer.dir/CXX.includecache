@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xujiiagen/Dropbox/project_get_from_github/leetcode_interview/剑指offer/剑指offer3_二维数组中查找.cpp
+iostream
+-
+vector
+-
+string
+-
+
