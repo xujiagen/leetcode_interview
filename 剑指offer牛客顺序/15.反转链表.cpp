@@ -78,19 +78,21 @@ int main()
 }
 */
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
-struct ListNode {
-	int val;
-	struct ListNode *next;
-	ListNode(int x) :
-			val(x), next(NULL) {
-	}
+struct ListNode
+{
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(NULL)
+    {
+    }
 };
 
+/*
 class Solution {
 public:
     ListNode* ReverseList(ListNode* pHead) 
@@ -110,3 +112,55 @@ public:
         return top;
     }
 };
+*/
+
+class Solution
+{
+public:
+    ListNode *ReverseList(ListNode *pHead)
+    {
+        if (pHead == NULL || pHead->next == NULL)
+            return pHead;
+        ListNode *top(pHead);
+        ListNode *second(pHead->next);
+        ListNode *third(pHead->next->next);
+        top->next = NULL;
+        second->next = top;
+        while (third)
+        {
+            top = second;
+            second = third;
+            third = third->next;
+            second->next = top;
+        }
+        return second;
+    }
+};
+
+void printNode(ListNode *&_Top)
+{
+    ListNode *copyNode(_Top);
+    while (copyNode)
+    {
+        std::cout << copyNode->val << " ";
+        copyNode = copyNode->next;
+    }
+    std::cout << std::endl;
+}
+
+int main(int argc, char **argv)
+{
+    int vec[] = {1, 2, 3, 4, 5, 6, 7};
+    std::vector<int> vecList(vec, vec + sizeof(vec) / sizeof(int));
+    ListNode *top = new ListNode(0);
+    ListNode *copyTop(top);
+    for (int i = 0; i < vecList.size(); i++)
+    {
+        copyTop->next = new ListNode(vecList[i]);
+        copyTop = copyTop->next;
+    }
+    printNode(top);
+    ListNode *reverseTop = Solution().ReverseList(top);
+    printNode(reverseTop);
+    return 0;
+}

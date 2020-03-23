@@ -3,7 +3,6 @@
 首先这一段代码不是很难，但是后面写了一点广度有优先便利
 */
 
-
 /*
 #include<iostream>
 #include<vector>
@@ -150,18 +149,21 @@ int main()
    // return 0;
 }
 */
-#include<iostream>
-#include<vector>
-#include<queue>
+#include <iostream>
+#include <vector>
+#include <queue>
 
 using namespace std;
 
-struct TreeNode {
+struct TreeNode
+{
     int val;
     TreeNode *left;
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
+
+/*
 class Solution 
 {
 public:
@@ -190,9 +192,64 @@ public:
         return root; 
     }
 };
+*/
 
-int main()
+class Solution
 {
-    Solution a;
+public:
+    TreeNode *reConstructBinaryTree(vector<int> pre, vector<int> vin)
+    {
+        if (pre.size() < 1 || pre.size() != vin.size())
+            return NULL;
+        return reConstruct(pre, 0, pre.size() - 1, vin, 0, vin.size() - 1);
+    }
+    TreeNode *reConstruct(std::vector<int> &_Pre, int _PreFront, int _PreBack, std::vector<int> &_Vin, int _VinFront, int _VinBack)
+    {
+        if (_PreFront > _PreBack)
+            return NULL;
+        std::cout << _Pre[_PreFront] << std::endl;
+        TreeNode *top = new TreeNode(_Pre[_PreFront]);
+        int vinCount = _VinFront;
+        while (_Vin[vinCount] != _Pre[_PreFront])
+            vinCount++;
+        top->left = reConstruct(_Pre, _PreFront + 1, _PreFront + vinCount - _VinFront, _Vin, _VinFront, vinCount - 1);
+        top->right = reConstruct(_Pre, _PreFront + 1 + vinCount - _VinFront, _PreBack, _Vin, vinCount + 1, _VinBack);
+        return top;
+    }
+};
+
+template <class T>
+void printList(std::vector<T> &_VecList)
+{
+    if (_VecList.size() < 1)
+        return;
+    for (int i = 0; i < _VecList.size(); i++)
+    {
+        std::cout << _VecList[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
+void printTreeNode(TreeNode *_Node)
+{
+    if (_Node == NULL)
+        return;
+    std::cout << _Node->val << " ";
+    printTreeNode(_Node->left);
+    printTreeNode(_Node->right);
+}
+
+int main(int argc, char **argv)
+{
+    int pre[] = {1, 2, 4, 5, 3, 6, 7};
+    int vin[] = {4, 2, 5, 1, 6, 3, 7};
+    std::vector<int> preList(pre, pre + sizeof(pre) / sizeof(int));
+    std::vector<int> vinList(vin, vin + sizeof(vin) / sizeof(int));
+    std::cout << "print pre: " << std::endl;
+    printList<int>(preList);
+    std::cout << "print vin: " << std::endl;
+    printList<int>(vinList);
+    TreeNode *node = Solution().reConstructBinaryTree(preList, vinList);
+    printTreeNode(node);
     return 0;
 }

@@ -1,12 +1,14 @@
 /*
 定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数
 */
-#include<iostream>
-#include<vector>
-#include<stack>
+#include <algorithm>
+#include <iostream>
+#include <vector>
+#include <stack>
 
 using namespace std;
 
+/*
 class Solution
 {
     public:
@@ -41,4 +43,38 @@ class Solution
     std::stack<int> stack1;
     std::stack<int> stack2;
 };
-
+*/
+class Solution
+{
+public:
+    void push(int value)
+    {
+        mOrigin.push(value);
+        if (mMin.size() < 1)
+            mMin.push(value);
+        else
+            mMin.push(std::min(value, mMin.top()));
+    }
+    void pop()
+    {
+        if (mOrigin.size() > 0)
+        {
+            mOrigin.pop();
+            mMin.pop();
+        }
+        else
+            return;
+    }
+    int top()
+    {
+        if (mOrigin.size() > 0)
+            return mOrigin.top();
+    }
+    int min()
+    {
+        if (mMin.size() > 0)
+            return mMin.top();
+    }
+    std::stack<int> mOrigin;
+    std::stack<int> mMin;
+};

@@ -3,6 +3,7 @@
 用两个栈来实现一个队列，完成队列的push和pop操作，队列中的元素为int类型
 */
 
+/*
 #include<iostream>
 #include<vector>
 #include<queue>
@@ -55,4 +56,53 @@ int main()
     }
     Solution a;
     return 0;
+}
+*/
+
+#include <algorithm>
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+class Solution
+{
+public:
+    void push(int node)
+    {
+        stack1.push(node);
+    }
+
+    int pop()
+    {
+        if (stack2.size() > 0)
+        {
+            int num = stack2.top();
+            stack2.pop();
+            return num;
+        }
+        else if (stack1.size() > 0)
+        {
+            while (stack1.size() > 0)
+            {
+                stack2.push(stack1.top());
+                stack1.pop();
+            }
+            int num = stack2.top();
+            stack2.pop();
+            return num;
+        }
+    }
+
+private:
+    stack<int> stack1;
+    stack<int> stack2;
+};
+
+int main(int argc, char **argv)
+{
+    int vec[] = {1, 2, 3, 4, 5, 6};
+    std::vector<int> vecList(vec, vec + sizeof(vec) / sizeof(int));
+    for ()
+        return 0;
 }

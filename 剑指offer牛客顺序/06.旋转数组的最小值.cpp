@@ -7,9 +7,9 @@
 
 */
 
-#include<iostream>
-#include<vector>
-#include<queue>
+#include <iostream>
+#include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -64,6 +64,7 @@ int main()
 }
 */
 
+/*
 class Solution 
 {
 public:
@@ -101,3 +102,54 @@ public:
         return mininum;
     }
 };
+*/
+
+class Solution
+{
+public:
+    int minNumberInRotateArray(vector<int> rotateArray)
+    {
+        if (rotateArray.size() < 1)
+            return 0;
+        int front = 0, back = rotateArray.size() - 1;
+        if (rotateArray[front] < rotateArray[back])
+            return rotateArray[front];
+        int middle;
+        while (rotateArray[front] >= rotateArray[back])
+        {
+            if (back - front == 1)
+            {
+                middle = back;
+                break;
+            }
+            middle = (front + back) / 2;
+            std::cout << "front: " << rotateArray[front] << " middle: " << rotateArray[middle] << " back: " << rotateArray[back] << std::endl;
+            if (rotateArray[front] == rotateArray[middle] && rotateArray[middle] == rotateArray[back])
+                return lineMinFind(rotateArray, front, back);
+            else if (rotateArray[front] >= rotateArray[middle])
+                back = middle;
+            else if (rotateArray[back] <= rotateArray[middle])
+                front = middle;
+        }
+        return rotateArray[middle];
+    }
+    int lineMinFind(std::vector<int> &_VecList, int front, int back)
+    {
+        int minimum = _VecList[front];
+        for (int i = front; i < back; i++)
+        {
+            if (_VecList[i] < minimum)
+                minimum = _VecList[i];
+        }
+        return minimum;
+    }
+};
+
+int main(int argc, char **argv)
+{
+    int vec[] = {7, 1, 2, 3, 4, 5};
+    std::vector<int> vecList(vec, vec + sizeof(vec) / sizeof(int));
+    std::cout << "return mininum one in the list: " << std::endl;
+    std::cout << Solution().minNumberInRotateArray(vecList) << std::endl;
+    return 0;
+}

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.5)
+project(leetcode)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_BUILD_TYPE debug)
+add_executable(offer 49.数组中重复的数字.cpp)

@@ -8,19 +8,21 @@
 
 这个程序需要注意的是，如果这个链表的长度就是k,可能会存在错误，需要给这个第一指针先下移k-1,再给第二个指针赋值
 */
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
-
-struct ListNode {
-	int val;
-	struct ListNode *next;
-	ListNode(int x) :
-			val(x), next(NULL) {
-	}
+struct ListNode
+{
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(NULL)
+    {
+    }
 };
+
+/*
 class Solution {
 public:
     ListNode* FindKthToTail(ListNode* pListHead, unsigned int k) 
@@ -46,8 +48,46 @@ public:
         return first;
     }
 };
+*/
+class Solution
+{
+public:
+    ListNode *FindKthToTail(ListNode *pListHead, unsigned int k)
+    {
+        int ListCount = 0;
+        ListNode *copyK(pListHead);
+        while (copyK && ListCount < k)
+        {
+            copyK = copyK->next;
+            ListCount++;
+        }
+        if (ListCount != k)
+            return NULL;
+        ListNode *copyTop(pListHead);
+        while (copyK)
+        {
+            copyK = copyK->next;
+            copyTop = copyTop->next;
+        }
+        return copyTop;
+    }
+};
 
 int main()
 {
+    int vec[] = {1, 2, 3, 4, 5, 6, 7};
+    std::vector<int> vecList(vec, vec + sizeof(vec) / sizeof(int));
+    ListNode *top = new ListNode(0);
+    ListNode *copyTop(top);
+    for (int i = 0; i < vecList.size(); i++)
+    {
+        copyTop->next = new ListNode(vecList[i]);
+        copyTop = copyTop->next;
+    }
+    ListNode *kNode = Solution().FindKthToTail(top, 3);
+    if (kNode == NULL)
+        std::cout << "null point!" << std::endl;
+    else
+        std::cout << "k Num: " << kNode->val << std::endl;
     return 0;
 }
