@@ -1,8 +1,43 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(std::string s) {
+        if (!s.size())
+            return 0;
+        int subLength = 0;
+        std::string subString;
+        for (auto &subChar : s) {
+            if (subString.find(subChar) == -1) {
+                subString.push_back(subChar);
+                if (subString.size() > subLength)
+                    subLength = subString.size();
+            } else {
+                std::size_t position = subString.find(subChar) + 1;
+                subString = subString.substr(position, subString.size() - position);
+                subString.push_back(subChar);
+            }
+        }
+        return subLength;
+    }
+};
+
+int main(int argc, char** argv) {
+    std::string sentense = "dvdf";
+    std::cout << "input sentense:" << sentense << std::endl;
+    std::cout << "sub sentense length: " 
+              << Solution().lengthOfLongestSubstring(sentense) << std::endl;
+
+    return 0;
+}
+
+/*
 #include<iostream>
 #include<string>
 #include<vector>
 
-/*
 using namespace std;
 
 class Solution
@@ -31,7 +66,6 @@ class Solution
         return substring_length;
     }
 };
- */
 using namespace std;
 
 class Solution{
@@ -54,3 +88,5 @@ class Solution{
         return sub_length;
     }
 };
+
+*/

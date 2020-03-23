@@ -1,3 +1,76 @@
+#include <iostream>
+#include <vector>
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x):val(x), next(NULL) {}
+};
+
+
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        if (!l1)
+            return l2;
+        if (!l2)
+            return l1;
+        int addCount = 0;
+        ListNode *list = new ListNode(0);
+        ListNode *point = list;
+        while (l1 || addCount || l2)
+        {
+            int sum = addCount + (l1 ? l1->val : 0) + (l2 ? l2->val : 0);
+            addCount = sum / 10;
+            sum = sum % 10;
+            if (l1)
+                l1 = l1->next;
+            if (l2)
+                l2 = l2->next;
+            point->next = new ListNode(sum);
+            point = point->next;
+        }
+        return list->next;
+    }
+};
+
+void printListNode(ListNode* point) {
+    while (point) {
+        std::cout << point->val << " ";
+        point = point->next;
+    }
+    std::cout << std::endl;
+
+}
+
+int main(int argc, char* argv[]) {
+    Solution a;
+
+    ListNode *top1 = new ListNode(2);
+    ListNode *topCopy = top1;
+    topCopy->next = new ListNode(4);
+    topCopy = topCopy->next;
+    topCopy->next = new ListNode(3);
+
+    ListNode *top2 = new ListNode(5);
+    topCopy = top2;
+    topCopy->next = new ListNode(6);
+    topCopy = topCopy->next;
+    topCopy->next = new ListNode(4);
+
+    std::cout << "print ListNode 1" << std::endl;
+    printListNode(top1);
+
+    std::cout << "print ListNode 2" << std::endl;
+    printListNode(top2);
+
+
+    ListNode *point = a.addTwoNumbers(top1, top2);
+    printListNode(point);
+
+    return 0;
+}
+
 //题目的地址，计算两个数字的和，同时这个数据是保存在链表里面
 /*
 #include<iostream>
@@ -147,7 +220,7 @@ class Solution
 };
 
 
- */
+
 
 #include<iostream>
 #include<vector>
@@ -185,3 +258,5 @@ public:
         return top->next;
     }
 };
+
+*/

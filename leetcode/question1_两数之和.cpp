@@ -1,3 +1,41 @@
+#include <iostream>
+#include <map>
+#include <vector>
+
+class Solution {
+    public:
+    std::vector<int> twoSum(std::vector<int>& nums, int target) {
+        std::vector<int> res;
+        if (!nums.size())
+            return res;
+        std::map<int, std::size_t> numsMap;
+        for (std::size_t index = 0; index < nums.size(); index++) {
+            numsMap[nums[index]] = index;
+        }
+        for (std::size_t index = 0; index < nums.size(); index++)
+        {
+            if (numsMap.count(target - nums[index]) != 0 
+                    && index != numsMap[target - nums[index]]) {
+                res.push_back(index);
+                res.push_back(numsMap[target - nums[index]]);
+                break;
+            }
+        }
+        return res;
+    }
+};
+
+int main(int argc, char* argv[]) {
+    Solution a;
+    int[] list = {2, 7, 11, 15};
+    std::vector<int> initialList(list, list + sizeof(list) / sizeof(int));
+
+    std::vector<int> vecList = a.twoSum(initialList, 9);
+    std::cout << vecList[0] << " " << vecList[1] << std::endl;
+    return 0;
+}
+
+/*
 //给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
 
 #include<iostream>
@@ -128,3 +166,4 @@ class Solution{
         return vec_int;
     }
 };
+*/

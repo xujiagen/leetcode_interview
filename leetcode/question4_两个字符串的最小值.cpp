@@ -1,3 +1,32 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+
+class Solution {
+public:
+    double findMedianSortedArrays(std::vector<int>& nums1, std::vector<int>& nums2) {
+        if (nums1.size() > nums2.size())
+            return findMedianSortedArrays(nums2, nums1);
+        // nums1 = 
+        int m = nums1.size();// first vector list small
+        int n = nums2.size();// second vector list large
+        int l = 0, r = m;
+        int len = (m + n + 1) / 2;
+        while (l <= r) {
+            int i = (l + r) / 2;
+            int j = len - i;
+            if ()
+        }
+        }
+};
+
+int main(int argc, char** argv) {
+
+} 
+
+
+/*
 #include<iostream>
 #include<string>
 #include<vector>
@@ -259,3 +288,5 @@ class Solution
     }
     
 };
+
+*/
