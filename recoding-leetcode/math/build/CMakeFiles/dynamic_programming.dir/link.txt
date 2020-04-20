@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -g   CMakeFiles/dynamic_programming.dir/202.快乐数.cpp.o  -o dynamic_programming 

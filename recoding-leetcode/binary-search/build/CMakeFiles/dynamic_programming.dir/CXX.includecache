@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/124.二叉树中的最大路径和.cpp
+algorithm
+-
+climits
+-
+iostream
+-
+vector
+-
+
