@@ -65,6 +65,16 @@
 #include <vector>
 #include <unordered_set>
 
+void printList(const std::vector<std::vector<std::string>> &_StrList) {
+    if (_StrList.size() < 1) return;
+    for (int i = 0; i <_StrList.size(); i++) {
+        for (int j = 0; j < _StrList[i].size(); j++) {
+            std::cout << _StrList[i][j] << " ";
+        }
+        std::cout << std::endl; 
+    }
+    std::cout << std::endl;
+}
 class Solution
 {
 public:
@@ -72,7 +82,67 @@ public:
         std::string beginWord, std::string endWord,
         std::vector<std::string> &wordList)
     {
+        std::vector<std::vector<std::string>> res;
+        /*
         std::unordered_set<std::string> strSet(wordList.begin(), wordList.end());
+        if (strSet.find(beginWord) == strSet.end() || strSet.find(endWord) == strSet.end()) 
+            return res;
+            */
+        bool beginFlag = false, endFlag = false;
+        for (int i = 0; i < wordList.size(); i++) {
+            if (wordList[i] == beginWord) beginFlag = true;
+            if (wordList[i] == endWord) endFlag = true;
+        }
+        if (!beginFlag || !endFlag) return res;
+        for (int i = 0; i < wordList.size(); i++) {
+            if (wordList[i] == beginWord) {
+                wordList.erase(wordList.begin() + i);
+                break;
+            }
+        }
+        std::vector<std::string> strList;
+        strList.push_back(beginWord);
+        IterString(wordList, beginWord, endWord, res, strList);
+        return res;
+    }
+    void IterString(std::vector<std::string> wordList, 
+                    std::string beginWord, std::string endWord,
+                    std::vector<std::vector<std::string>> &_Res,  
+                    std::vector<std::string> &res) {
+        for (int i = 0; i < wordList.size(); i++) {
+            if (compareString(wordList[i], beginWord)) {
+                if (wordList[i] == endWord) {
+                    res.push_back(endWord);
+                    _Res.push_back(res);
+                    continue;
+                } else {
+                    res.push_back(wordList[i]);
+                    std::vector<std::string> copyWord(wordList.begin(), wordList.end());
+                    copyWord.erase(copyWord.begin() + i);
+                    IterString(copyWord, res[res.size() - 1], endWord, _Res, res);
+                }
+            }
+        }
+        return;
+    }
+    bool compareString(std::string first, std::string second) {
+        if (first.size() != second.size() || first.size() <1) return false;
+        int DiffCount = 0;
+        for (int i = 0; i < first.size(); i++) {
+            if (DiffCount > 1) return false;
+            if (first[i] != second[i]) DiffCount++;
+        }
+        if (DiffCount == 1) return true;
+        else return false; 
     }
 };
+
+int main(int argc, char** argv) {
+    std::vector<std::string> wordList = {"hot", "dot","dog", "lot", "log", "cog"};
+    std::string beginWord = "hit";
+    std::string endWord = "cog";
+    std::vector<std::vector<std::string>> res = Solution().findLadders(beginWord, endWord, wordList);
+    printList(res);
+    return 0;
+}
 // @lc code=end
