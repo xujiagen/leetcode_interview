@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xujiiagen/project/leetcode_interview/recoding-leetcode/dynamic-programming/144.二叉树的前序遍历.cpp
+algorithm
+-
+iostream
+-
+string
+-
+vector
+-
+stack
+-
+
