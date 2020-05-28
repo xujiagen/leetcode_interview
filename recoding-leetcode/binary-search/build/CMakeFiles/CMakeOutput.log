@@ -1,4 +1,4 @@
-The system is: Linux - 4.15.0-96-generic - x86_64
+The system is: Linux - 4.15.0-99-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/xujiiagen/project/leetco
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b6f30/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b6f30.dir/build.make CMakeFiles/cmTC_b6f30.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_cf9dd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf9dd.dir/build.make CMakeFiles/cmTC_cf9dd.dir/build
 make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b6f30.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_b6f30.dir/testCCompiler.c.o   -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_b6f30
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6f30.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_b6f30.dir/testCCompiler.c.o  -o cmTC_b6f30 
+Building C object CMakeFiles/cmTC_cf9dd.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_cf9dd.dir/testCCompiler.c.o   -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_cf9dd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf9dd.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_cf9dd.dir/testCCompiler.c.o  -o cmTC_cf9dd 
 make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f2e96/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f2e96.dir/build.make CMakeFiles/cmTC_f2e96.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9622f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9622f.dir/build.make CMakeFiles/cmTC_9622f.dir/build
 make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f2e96.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_f2e96.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_f2e96
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2e96.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_f2e96.dir/CMakeCCompilerABI.c.o  -o cmTC_f2e96  
+Building C object CMakeFiles/cmTC_9622f.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_9622f.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_9622f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9622f.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_9622f.dir/CMakeCCompilerABI.c.o  -o cmTC_9622f  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,8 +59,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f2e96' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQVOXW5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_f2e96 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_f2e96.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9622f' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6otloJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_9622f /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_9622f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
 
 
@@ -68,14 +68,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f2e96/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f2e96.dir/build.make CMakeFiles/cmTC_f2e96.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_9622f/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_9622f.dir/build.make CMakeFiles/cmTC_9622f.dir/build]
   ignore line: [make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_f2e96.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_f2e96.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_f2e96]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2e96.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_f2e96.dir/CMakeCCompilerABI.c.o  -o cmTC_f2e96  ]
+  ignore line: [Building C object CMakeFiles/cmTC_9622f.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_9622f.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_9622f]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9622f.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_9622f.dir/CMakeCCompilerABI.c.o  -o cmTC_9622f  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f2e96' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQVOXW5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_f2e96 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_f2e96.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9622f' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6otloJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_9622f /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_9622f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccQVOXW5.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc6otloJ.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -108,7 +108,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f2e96] ==> ignore
+    arg [cmTC_9622f] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -120,7 +120,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_f2e96.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_9622f.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -154,14 +154,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_02f53/fast"
-/usr/bin/make -f CMakeFiles/cmTC_02f53.dir/build.make CMakeFiles/cmTC_02f53.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_cb0a7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cb0a7.dir/build.make CMakeFiles/cmTC_cb0a7.dir/build
 make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_02f53.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_02f53.dir/feature_tests.c.o   -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_02f53
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02f53.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_02f53.dir/feature_tests.c.o  -o cmTC_02f53 
+Building C object CMakeFiles/cmTC_cb0a7.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_cb0a7.dir/feature_tests.c.o   -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_cb0a7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb0a7.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_cb0a7.dir/feature_tests.c.o  -o cmTC_cb0a7 
 make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
 
 
@@ -174,14 +174,14 @@ make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_99c6e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_99c6e.dir/build.make CMakeFiles/cmTC_99c6e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_7c1e7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7c1e7.dir/build.make CMakeFiles/cmTC_7c1e7.dir/build
 make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_99c6e.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_99c6e.dir/feature_tests.c.o   -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_99c6e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99c6e.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_99c6e.dir/feature_tests.c.o  -o cmTC_99c6e 
+Building C object CMakeFiles/cmTC_7c1e7.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_7c1e7.dir/feature_tests.c.o   -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7c1e7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c1e7.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_7c1e7.dir/feature_tests.c.o  -o cmTC_7c1e7 
 make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
 
 
@@ -194,14 +194,14 @@ make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_84d24/fast"
-/usr/bin/make -f CMakeFiles/cmTC_84d24.dir/build.make CMakeFiles/cmTC_84d24.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c96f6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c96f6.dir/build.make CMakeFiles/cmTC_c96f6.dir/build
 make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_84d24.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_84d24.dir/feature_tests.c.o   -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_84d24
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84d24.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_84d24.dir/feature_tests.c.o  -o cmTC_84d24 
+Building C object CMakeFiles/cmTC_c96f6.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_c96f6.dir/feature_tests.c.o   -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_c96f6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c96f6.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c96f6.dir/feature_tests.c.o  -o cmTC_c96f6 
 make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
 
 
@@ -212,28 +212,28 @@ make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e25f8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e25f8.dir/build.make CMakeFiles/cmTC_e25f8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5a094/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5a094.dir/build.make CMakeFiles/cmTC_5a094.dir/build
 make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e25f8.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_e25f8.dir/testCXXCompiler.cxx.o -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_e25f8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e25f8.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_e25f8.dir/testCXXCompiler.cxx.o  -o cmTC_e25f8 
+Building CXX object CMakeFiles/cmTC_5a094.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_5a094.dir/testCXXCompiler.cxx.o -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_5a094
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a094.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_5a094.dir/testCXXCompiler.cxx.o  -o cmTC_5a094 
 make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6f9f6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6f9f6.dir/build.make CMakeFiles/cmTC_6f9f6.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_20bf7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_20bf7.dir/build.make CMakeFiles/cmTC_20bf7.dir/build
 make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6f9f6.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_6f9f6.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_6f9f6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f9f6.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_6f9f6.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6f9f6  
+Building CXX object CMakeFiles/cmTC_20bf7.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_20bf7.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_20bf7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20bf7.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_20bf7.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_20bf7  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -243,8 +243,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6f9f6' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPQ6g6p.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_6f9f6 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_6f9f6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20bf7' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFAWOI3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_20bf7 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_20bf7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
 
 
@@ -252,14 +252,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_6f9f6/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_6f9f6.dir/build.make CMakeFiles/cmTC_6f9f6.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_20bf7/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_20bf7.dir/build.make CMakeFiles/cmTC_20bf7.dir/build]
   ignore line: [make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_6f9f6.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_6f9f6.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_6f9f6]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f9f6.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_6f9f6.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6f9f6  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_20bf7.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_20bf7.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_20bf7]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20bf7.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_20bf7.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_20bf7  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -269,13 +269,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6f9f6' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPQ6g6p.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_6f9f6 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_6f9f6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20bf7' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFAWOI3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_20bf7 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_20bf7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccPQ6g6p.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccFAWOI3.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -292,7 +292,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_6f9f6] ==> ignore
+    arg [cmTC_20bf7] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -304,7 +304,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_6f9f6.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_20bf7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -336,14 +336,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_08c4c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_08c4c.dir/build.make CMakeFiles/cmTC_08c4c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_0fb2e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0fb2e.dir/build.make CMakeFiles/cmTC_0fb2e.dir/build
 make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_08c4c.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_08c4c.dir/feature_tests.cxx.o -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_08c4c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08c4c.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_08c4c.dir/feature_tests.cxx.o  -o cmTC_08c4c 
+Building CXX object CMakeFiles/cmTC_0fb2e.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_0fb2e.dir/feature_tests.cxx.o -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0fb2e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0fb2e.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_0fb2e.dir/feature_tests.cxx.o  -o cmTC_0fb2e 
 make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
 
 
@@ -409,14 +409,14 @@ make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6e6e2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6e6e2.dir/build.make CMakeFiles/cmTC_6e6e2.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_54d69/fast"
+/usr/bin/make -f CMakeFiles/cmTC_54d69.dir/build.make CMakeFiles/cmTC_54d69.dir/build
 make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6e6e2.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_6e6e2.dir/feature_tests.cxx.o -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_6e6e2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e6e2.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_6e6e2.dir/feature_tests.cxx.o  -o cmTC_6e6e2 
+Building CXX object CMakeFiles/cmTC_54d69.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_54d69.dir/feature_tests.cxx.o -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_54d69
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54d69.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_54d69.dir/feature_tests.cxx.o  -o cmTC_54d69 
 make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
 
 
@@ -482,14 +482,14 @@ make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e1584/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e1584.dir/build.make CMakeFiles/cmTC_e1584.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_20020/fast"
+/usr/bin/make -f CMakeFiles/cmTC_20020.dir/build.make CMakeFiles/cmTC_20020.dir/build
 make[1]: Entering directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e1584.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_e1584.dir/feature_tests.cxx.o -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_e1584
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1584.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_e1584.dir/feature_tests.cxx.o  -o cmTC_e1584 
+Building CXX object CMakeFiles/cmTC_20020.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_20020.dir/feature_tests.cxx.o -c /home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_20020
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20020.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_20020.dir/feature_tests.cxx.o  -o cmTC_20020 
 make[1]: Leaving directory '/home/xujiiagen/project/leetcode_interview/recoding-leetcode/binary-search/build/CMakeFiles/CMakeTmp'
 
 

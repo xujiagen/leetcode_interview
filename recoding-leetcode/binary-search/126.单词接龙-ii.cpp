@@ -65,13 +65,17 @@
 #include <vector>
 #include <unordered_set>
 
-void printList(const std::vector<std::vector<std::string>> &_StrList) {
-    if (_StrList.size() < 1) return;
-    for (int i = 0; i <_StrList.size(); i++) {
-        for (int j = 0; j < _StrList[i].size(); j++) {
+void printList(const std::vector<std::vector<std::string>> &_StrList)
+{
+    if (_StrList.size() < 1)
+        return;
+    for (int i = 0; i < _StrList.size(); i++)
+    {
+        for (int j = 0; j < _StrList[i].size(); j++)
+        {
             std::cout << _StrList[i][j] << " ";
         }
-        std::cout << std::endl; 
+        std::cout << std::endl;
     }
     std::cout << std::endl;
 }
@@ -83,66 +87,87 @@ public:
         std::vector<std::string> &wordList)
     {
         std::vector<std::vector<std::string>> res;
-        /*
-        std::unordered_set<std::string> strSet(wordList.begin(), wordList.end());
-        if (strSet.find(beginWord) == strSet.end() || strSet.find(endWord) == strSet.end()) 
-            return res;
-            */
         bool beginFlag = false, endFlag = false;
-        for (int i = 0; i < wordList.size(); i++) {
-            if (wordList[i] == beginWord) beginFlag = true;
-            if (wordList[i] == endWord) endFlag = true;
+        for (int i = 0; i < wordList.size(); i++)
+        {
+            if (wordList[i] == endWord)
+                endFlag = true;
         }
-        if (!beginFlag || !endFlag) return res;
-        for (int i = 0; i < wordList.size(); i++) {
-            if (wordList[i] == beginWord) {
-                wordList.erase(wordList.begin() + i);
-                break;
-            }
-        }
+        if (!endFlag)
+            return res;
         std::vector<std::string> strList;
         strList.push_back(beginWord);
-        IterString(wordList, beginWord, endWord, res, strList);
+        int size = wordList.size() + 1;
+        IterString(wordList, beginWord, endWord, res, strList, size);
         return res;
     }
-    void IterString(std::vector<std::string> wordList, 
+    void IterString(std::vector<std::string> wordList,
                     std::string beginWord, std::string endWord,
-                    std::vector<std::vector<std::string>> &_Res,  
-                    std::vector<std::string> &res) {
-        for (int i = 0; i < wordList.size(); i++) {
-            if (compareString(wordList[i], beginWord)) {
-                if (wordList[i] == endWord) {
-                    res.push_back(endWord);
-                    _Res.push_back(res);
-                    continue;
-                } else {
-                    res.push_back(wordList[i]);
+                    std::vector<std::vector<std::string>> &_Res,
+                    std::vector<std::string> res, int &size)
+    {
+        for (int i = 0; i < wordList.size(); i++)
+        {
+            std::vector<std::string> copyRes(res.begin(), res.end());
+            if (compareString(wordList[i], beginWord))
+            {
+                if (wordList[i] == endWord)
+                {
+                    if (copyRes.size() + 1 == size)
+                    {
+                        copyRes.push_back(endWord);
+                        _Res.push_back(copyRes);
+                        continue;
+                    }
+                    else if (copyRes.size() + 1 < size)
+                    {
+                        copyRes.push_back(endWord);
+                        size = copyRes.size();
+                        _Res.clear();
+                        _Res.push_back(copyRes);
+                        continue;
+                    }
+                }
+                else
+                {
+                    //res.push_back(wordList[i]);
+                    copyRes.push_back(wordList[i]);
                     std::vector<std::string> copyWord(wordList.begin(), wordList.end());
                     copyWord.erase(copyWord.begin() + i);
-                    IterString(copyWord, res[res.size() - 1], endWord, _Res, res);
+                    IterString(copyWord, copyRes[copyRes.size() - 1], endWord, _Res, copyRes, size);
                 }
             }
         }
         return;
     }
-    bool compareString(std::string first, std::string second) {
-        if (first.size() != second.size() || first.size() <1) return false;
+    bool compareString(std::string first, std::string second)
+    {
+        if (first.size() != second.size() || first.size() < 1)
+            return false;
         int DiffCount = 0;
-        for (int i = 0; i < first.size(); i++) {
-            if (DiffCount > 1) return false;
-            if (first[i] != second[i]) DiffCount++;
+        for (int i = 0; i < first.size(); i++)
+        {
+            if (DiffCount > 1)
+                return false;
+            if (first[i] != second[i])
+                DiffCount++;
         }
-        if (DiffCount == 1) return true;
-        else return false; 
+        if (DiffCount == 1)
+            return true;
+        else
+            return false;
     }
 };
-
-int main(int argc, char** argv) {
-    std::vector<std::string> wordList = {"hot", "dot","dog", "lot", "log", "cog"};
+/*
+int main(int argc, char **argv)
+{
+    std::vector<std::string> wordList = {"hot", "dot", "dog", "lot", "log", "cog"};
     std::string beginWord = "hit";
     std::string endWord = "cog";
     std::vector<std::vector<std::string>> res = Solution().findLadders(beginWord, endWord, wordList);
     printList(res);
+    std::cout << res.size() << std::endl;
     return 0;
 }
+*/
 // @lc code=end
