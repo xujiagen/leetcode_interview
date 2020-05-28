@@ -8,7 +8,7 @@
             "name": "(gdb) 启动",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/home/xujiiagen/Dropbox/project_get_from_github/leetcode_interview/recoding-leetcode/dynamic-programming/build/dynamic_programming",
+            "program": "/home/xujiiagen/project/leetcode_interview/recoding-leetcode/dynamic-programming/build/dynamic_programming",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
