@@ -1,1 +1,1 @@
-/usr/bin/c++    -std=c++11 -g   CMakeFiles/dynamic_programming.dir/144.二叉树的前序遍历.cpp.o  -o dynamic_programming 
+/usr/bin/c++    -std=c++11 -g   CMakeFiles/dynamic_programming.dir/108.将有序数组转换为二叉搜索树.cpp.o  -o dynamic_programming 
