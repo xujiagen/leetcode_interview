@@ -14,12 +14,12 @@
         "cwctype": "cpp",
         "array": "cpp",
         "atomic": "cpp",
+        "hash_map": "cpp",
         "strstream": "cpp",
         "*.tcc": "cpp",
         "bitset": "cpp",
         "chrono": "cpp",
         "complex": "cpp",
-        "condition_variable": "cpp",
         "cstdint": "cpp",
         "deque": "cpp",
         "list": "cpp",
@@ -40,7 +40,6 @@
         "istream": "cpp",
         "limits": "cpp",
         "memory": "cpp",
-        "mutex": "cpp",
         "new": "cpp",
         "ostream": "cpp",
         "numeric": "cpp",
@@ -53,6 +52,6 @@
         "utility": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "hash_map": "cpp"
+        "unordered_set": "cpp"
     }
 }
