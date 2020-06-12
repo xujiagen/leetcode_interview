@@ -54,5 +54,6 @@
         "typeinfo": "cpp",
         "string": "cpp",
         "unordered_set": "cpp"
-    }
+    },
+    "cmake.configureOnOpen": false
 }
