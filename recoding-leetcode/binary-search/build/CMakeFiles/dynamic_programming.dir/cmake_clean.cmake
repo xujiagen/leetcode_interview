@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/dynamic_programming.dir/93.复原ip地址.cpp.o"
+  "CMakeFiles/dynamic_programming.dir/99.恢复二叉搜索树.cpp.o"
   "dynamic_programming.pdb"
   "dynamic_programming"
 )

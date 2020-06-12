@@ -73,11 +73,84 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-class Solution {
+
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <queue>
+/*
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+*/
+class Solution
+{
 public:
     void recoverTree(TreeNode* root) {
-        
+        mTreeList = {};
+        middleOrder(root);
+        //auto printValue = [](TreeNode* &_Node){std::cout << _Node->val << " ";};
+        //auto printValue = ()[int &_Value]{std::cout << _Value << " "};
+        //std::cout << "print for each: " << std::endl; 
+        //std::for_each(mTreeList.begin(), mTreeList.end(), printValue);
+        //std::cout << std::endl;
+        for (int i = 0; i < mTreeList.size() - 1; i++) {
+            if (mTreeList[i]->val > mTreeList[i + 1]->val) {
+                std::swap(mTreeList[i]->val, mTreeList[i + 1]->val);
+                break;
+            }
+        } 
+        return;
     }
+    void middleOrder(TreeNode* root) {
+        if (!root) return;
+        if (root->left) middleOrder(root->left);
+        mTreeList.push_back(root);
+        if (root->right) middleOrder(root->right);
+    }
+    std::vector<TreeNode *> mTreeList;
 };
+/*
+void PrintBST(TreeNode* &_Top) {
+    if (!_Top) return;
+    std::queue<TreeNode *> treeQueue;
+    treeQueue.push(_Top);
+    treeQueue.push(NULL);
+    while (treeQueue.size()) {
+        if (treeQueue.size() == 1 && treeQueue.front() == NULL) {
+            std::cout << std::endl; 
+            return;
+        };
+        if (treeQueue.front() == NULL) {
+            treeQueue.push(NULL);
+            treeQueue.pop();
+            std::cout << std::endl;
+            continue;
+        }
+        std::cout << treeQueue.front()->val << " ";
+        if (treeQueue.front()->left) treeQueue.push(treeQueue.front()->left);
+        if (treeQueue.front()->right) treeQueue.push(treeQueue.front()->right);
+        treeQueue.pop();
+    }
+}
+
+int main(int argc, char** argv) {
+    TreeNode* top = new TreeNode(1);
+    top->left = new TreeNode(3);
+    top->right = new TreeNode(2);
+    std::cout << "print BST" << std::endl; 
+    PrintBST(top);
+    std::cout << std::endl; 
+    Solution().recoverTree(top);
+    std::cout << "print BST" << std::endl;
+    PrintBST(top);
+    std::cout << std::endl;
+    return 0;
+}
+*/
 // @lc code=end
 

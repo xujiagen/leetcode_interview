@@ -51,8 +51,24 @@ struct ListNode
 class Solution
 {
 public:
-    ListNode *reverseBetween(ListNode *head, int m, int n)
-    {
+    ListNode *reverseBetween(ListNode *head, int m, int n) {
+        int index = 1;
+        ListNode* copyHead(head);
+        ListNode* frontCopy(NULL);
+        while (index < m) {
+            copyHead = copyHead->next;
+            frontCopy = copyHead;
+            index++;
+        } 
+        ListNode *first(copyHead);
+        ListNode *second(copyHead->next);
+        while (index < n) {
+            
         }
+    }
 };
+
+int main(int argc, char** argv) {
+    
+}
 // @lc code=end
