@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xujiiagen/test_new/first.cpp
+algorithm
+-
+iostream
+-
+string
+-
+vector
+-
+unordered_map
+-
+unordered_set
+-
+
