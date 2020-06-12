@@ -1,3 +1,0 @@
-/home/xujiiagen/project/leetcode_interview/recoding-leetcode/dynamic-programming/build/CMakeFiles/rebuild_cache.dir
-/home/xujiiagen/project/leetcode_interview/recoding-leetcode/dynamic-programming/build/CMakeFiles/edit_cache.dir
-/home/xujiiagen/project/leetcode_interview/recoding-leetcode/dynamic-programming/build/CMakeFiles/dynamic_programming.dir

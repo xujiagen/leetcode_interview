@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 3.5)
-project(dynamic_programming)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-set(CMAKE_BUILD_TYPE debug)
-add_executable(dynamic_programming 108.将有序数组转换为二叉搜索树.cpp)
