@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+/*
 class Solution {
 public:
     std::string longestPalindrome(std::string s) {
@@ -39,6 +39,24 @@ public:
         return s.substr(left, maxLength);
     }
 };
+*/
+class Solution {
+    public:
+    std::string longestPalindrome(std::string s) {
+        
+    }
+    int palindrome(std::string &s, int first, int second) {
+        while (first >= 0 && second < s.size()) {
+            if (s[first] != s[second]) {
+                return second - first + 1;
+            } else {
+                first--, second++;
+            }
+        }
+        return second - first + 1;
+    }
+};
+
 /*
 int main(int argc, char** argv) {
     std::string str("babad");

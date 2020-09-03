@@ -53,7 +53,31 @@ class Solution
 public:
     int candy(std::vector<int> &ratings)
     {
-        
+        if (ratings.size() < 2) return ratings.size();
+        std::vector<int> candyNum(ratings.size(), 1);
+        for (int i = 0; i < ratings.size() - 1; i++) {
+            if (ratings[i] < ratings[i + 1]) {
+                candyNum[i + 1] = candyNum[i] + 1;
+            }
+        }
+        for (int i = ratings.size() - 1; i > 0; i--) {
+            if (ratings[i - 1] > ratings[i]) {
+                if (candyNum[i - 1] > candyNum[i]) continue;
+                else candyNum[i - 1] = candyNum[i] + 1; 
+            }
+        }
+        int num = 0;
+        for (int i = 0; i < candyNum.size(); i++) {
+            num += candyNum[i];
+        }
+        return num;
     }
 };
+/*
+int main(int argc, char** argv) {
+    std::vector<int> ratings = {1, 2, 4, 3, 2, 1};
+    std::cout << Solution().candy(ratings) << std::endl; 
+    return 0;
+}
+*/
 // @lc code=end

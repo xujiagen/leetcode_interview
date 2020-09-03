@@ -71,6 +71,99 @@ void printList(ListNode *_Top)
     std::cout << std::endl;
 }
 
+/*
+class Solution {
+public:
+    ListNode *reverseKGroup(ListNode* head, int k) {
+        if (k <= 1 || !head) return head;
+        std::vector<ListNode*> nodeList(k, nullptr);
+        ListNode* top(head);
+        int count = 0, index = 0;
+        ListNode* second = NULL;
+        ListNode* back = NULL;
+        ListNode* first = NULL;
+        while (top) {
+            if (count >= k) {
+                for (int i = 0; i < k; i++) {
+                    if (i == 0) {
+                        nodeList[i]->next = second;
+                        second = nodeList.back();
+                        back = nodeList[0];
+                        continue;
+                    }
+                    if (!first) {
+                        first = nodeList.back();
+                    }
+                    nodeList[i]->next = nodeList[i - 1];
+                }
+                count = 0;
+            }
+            nodeList[count++] = top;
+            std::cout << "top: " << top->val << std::endl; 
+            top = top->next;
+        }
+        if (count > 0) back->next = nodeList[0];
+        else back->next = NULL;
+        return first;
+    }
+};
+*/
+class Solution {
+public:
+    ListNode *reverseKGroup(ListNode* head, int k) {
+        if (k <= 1 || !head) return head;
+        std::vector<ListNode*> nodeList(k, nullptr);
+        ListNode* top(head);
+        int count = 0, index = 0;
+        ListNode* listFirst(NULL), *listEnd(NULL), *grounpTop(NULL), *grounpBack(NULL);
+        while (top || count >= k) {
+            if (count >= k) {
+                for (int i = 0; i < k; i++) {
+                    if (i == 0) {
+                        if (!listFirst) listFirst = nodeList.back();
+                        if (!listEnd) {
+                            nodeList[i]->next = listEnd; 
+                            listEnd = nodeList[0];
+                        }
+                        else {
+                            listEnd->next = nodeList.back();
+                            listEnd = nodeList[0];
+                            listEnd->next = NULL;
+                        }
+                        continue;
+                    }
+                    nodeList[i]->next = nodeList[i - 1];
+                }
+                count = 0;
+            }
+            if (top) {
+                nodeList[count++] = top;
+                top = top->next;
+            }
+            //std::cout << "top: " << top->val << std::endl; 
+            //top = top->next;
+        }
+        if (count > 0 && listEnd) listEnd->next = nodeList[0];
+        return listFirst;
+    }
+};
+
+int main(int argc, char **argv)
+{
+    ListNode *top = new ListNode(1);
+    top->next = new ListNode(2);
+    /*
+    top->next->next = new ListNode(3);
+    top->next->next->next = new ListNode(4);
+    top->next->next->next->next = new ListNode(5);
+    */
+    printList(top);
+    ListNode *first = Solution().reverseKGroup(top, 2);
+    printList(first);
+    return 0;
+}
+
+/*
 class Solution
 {
 public:
@@ -125,17 +218,5 @@ public:
         }
     }
 };
-
-int main(int argc, char **argv)
-{
-    ListNode *top = new ListNode(1);
-    top->next = new ListNode(2);
-    top->next->next = new ListNode(3);
-    top->next->next->next = new ListNode(4);
-    top->next->next->next->next = new ListNode(5);
-    printList(top);
-    ListNode *first = Solution().reverseKGroup(top, 3);
-    printList(first);
-    return 0;
-}
+*/
 // @lc code=end

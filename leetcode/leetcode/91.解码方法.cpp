@@ -122,7 +122,7 @@ public:
     }
 };
 */
-
+/*
 class Solution
 {
 public:
@@ -170,18 +170,38 @@ public:
             else
                 vecList[i] = vecList[i - 1] + vecList[i - 2];
         }
-        /*
-        for (int i = 0; i < vecList.size(); i++)
-            std::cout << vecList[i] << " ";
-        std::cout << std::endl;
-        */
         return vecList[s.size() - 1];
+    }
+};
+*/
+class Solution {
+    public:
+    int numDecodings(std::string s) {
+        if (s.size() < 1) return 0;
+        for (int i = 0; i < s.size() + 1; ++i) if (s.substr(i, 2) == "00") return 0;
+        if (s[0] == '0') return 0;
+        std::vector<int> labels(s.size() + 1, 0);
+        labels[0] = 1;
+        labels[1] = 1;
+        int first = 0, second = 0;
+        for (int i = 1; i < s.size(); i++) {
+            first = 0, second = 0;
+            int singV = s[i] - '0', douV = std::stoi(s.substr(i - 1, 2));
+            if (singV > 0 && singV < 10 && douV > 9 && douV < 27) labels[i + 1] = labels[i] + labels[i - 1];
+            else if (singV > 0 && singV < 10 && (douV < 10 || douV > 26)) labels[i + 1] = labels[i];
+            else if (singV == 0 && douV > 9 && douV < 27) labels[i + 1] = labels[i - 1];
+            else return 0;
+        }
+        auto printValue = [](int &value) {std::cout << value << " ";};
+        std::for_each(labels.begin(), labels.end(), printValue);
+        std::cout << std::endl; 
+        return labels.back();
     }
 };
 /*
 int main(int argc, char **argv)
 {
-    std::string str("226");
+    std::string str("99");
     std::cout << Solution().numDecodings(str) << std::endl;
     return 0;
 }

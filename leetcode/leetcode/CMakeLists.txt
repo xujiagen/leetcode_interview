@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
 project(dynamic_programming)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -std=c++11")
 set(CMAKE_BUILD_TYPE debug)
-add_executable(dynamic_programming 202.快乐数.cpp)
+add_executable(dynamic_programming 239.滑动窗口最大值.cpp)

@@ -62,8 +62,10 @@
 #include <algorithm>
 #include <iostream>
 #include <string>
+#include <queue>
 #include <vector>
 #include <unordered_set>
+#include <unordered_map>
 
 void printList(const std::vector<std::vector<std::string>> &_StrList)
 {
@@ -79,86 +81,84 @@ void printList(const std::vector<std::vector<std::string>> &_StrList)
     }
     std::cout << std::endl;
 }
-class Solution
-{
+// 这个算法是基于图的广度优先便利来实现的
+const int INF = 1 << 20;
+class Solution {
 public:
-    std::vector<std::vector<std::string>> findLadders(
-        std::string beginWord, std::string endWord,
-        std::vector<std::string> &wordList)
-    {
-        std::vector<std::vector<std::string>> res;
-        bool beginFlag = false, endFlag = false;
-        for (int i = 0; i < wordList.size(); i++)
-        {
-            if (wordList[i] == endWord)
-                endFlag = true;
-        }
-        if (!endFlag)
-            return res;
-        std::vector<std::string> strList;
-        strList.push_back(beginWord);
-        int size = wordList.size() + 1;
-        IterString(wordList, beginWord, endWord, res, strList, size);
-        return res;
-    }
-    void IterString(std::vector<std::string> wordList,
-                    std::string beginWord, std::string endWord,
-                    std::vector<std::vector<std::string>> &_Res,
-                    std::vector<std::string> res, int &size)
-    {
-        for (int i = 0; i < wordList.size(); i++)
-        {
-            std::vector<std::string> copyRes(res.begin(), res.end());
-            if (compareString(wordList[i], beginWord))
-            {
-                if (wordList[i] == endWord)
-                {
-                    if (copyRes.size() + 1 == size)
-                    {
-                        copyRes.push_back(endWord);
-                        _Res.push_back(copyRes);
-                        continue;
-                    }
-                    else if (copyRes.size() + 1 < size)
-                    {
-                        copyRes.push_back(endWord);
-                        size = copyRes.size();
-                        _Res.clear();
-                        _Res.push_back(copyRes);
-                        continue;
-                    }
-                }
-                else
-                {
-                    //res.push_back(wordList[i]);
-                    copyRes.push_back(wordList[i]);
-                    std::vector<std::string> copyWord(wordList.begin(), wordList.end());
-                    copyWord.erase(copyWord.begin() + i);
-                    IterString(copyWord, copyRes[copyRes.size() - 1], endWord, _Res, copyRes, size);
-                }
+    std::vector<std::vector<std::string>> findLadders(std::string beginWord, 
+                                                      std::string endWord, 
+                                                      std::vector<std::string> &_WordList) {
+        int id = 0;
+        for (const std::string &word : _WordList) {
+            if (!wordId.count(word)) {
+                wordId[word] = id++;//vector data保存到 unordered_set里面去'
+                idWord.push_back(word);// vector data 保存到 std::vector<std::string> idWord里面去
             }
         }
-        return;
-    }
-    bool compareString(std::string first, std::string second)
-    {
-        if (first.size() != second.size() || first.size() < 1)
-            return false;
-        int DiffCount = 0;
-        for (int i = 0; i < first.size(); i++)
-        {
-            if (DiffCount > 1)
-                return false;
-            if (first[i] != second[i])
-                DiffCount++;
+        if (!wordId.count(endWord)) return {};
+        if (!wordId.count(beginWord)) {
+                wordId[beginWord] = id++;
+                idWord.push_back(beginWord);
+            }//这一步是beginWord可能不在这个序列里面,wordId里面保存这个序列,idWord里面保存beginWord
+            edges.resize(idWord.size());//edges是一个二维数组, 主要保存相互链接的两个节点
+            for (int i = 0; i < idWord.size(); i++) {
+                for (int j = i + 1; j < idWord.size(); j++) {
+                    if (transformCheck(idWord[i], idWord[j]))
+                    {
+                        edges[i].push_back(j);
+                        edges[j].push_back(i);
+                    }
+                }
+            }
+            const int dest = wordId[endWord];
+            std::vector<std::vector<std::string>> res;
+            std::queue<std::vector<int>> q;
+            std::vector<int> cost(id, INF);
+            q.push(std::vector<int>{wordId[beginWord]});
+            cost[wordId[beginWord]] = 0;
+            while (!q.empty()) {
+                std::vector<int> now = q.front();
+                q.pop();
+                int last = now.back();
+                if (last == dest) {
+                    std::vector<std::string> tmp;
+                    for (int index : now) {
+                        tmp.push_back(idWord[index]);
+                    }
+                    res.push_back(tmp);
+                } else {
+                    auto &vec = edges[last];
+                    for (int i = 0; i < edges[last].size(); i++)
+                    {
+                        int to = edges[last][i];
+                        if (cost[last] + 1 <= cost[to])
+                        {
+                            cost[to] = cost[last] + 1;
+                            std::vector<int> tmp(now);
+                            tmp.push_back(to);
+                            q.push(tmp);
+                        }
+                    }
+                }
+            }
+            return res;
         }
-        if (DiffCount == 1)
-            return true;
-        else
-            return false;
+
+    bool transformCheck(const std::string &str1, const std::string &str2) {
+        int differents = 0;
+        for (int i = 0; i < str1.size() && differents < 2; i++) {
+            if (str1[i] != str2[i]) {
+                differents++;
+            }
+        }
+        return differents == 1;
     }
+    //判断两个字符串的差异是不是只差一个字符
+private: 
+    std::unordered_map<std::string, int> wordId;
+    std::vector<std::string> idWord;
+    std::vector<std::vector<int>> edges;
 };
-/*
 int main(int argc, char **argv)
 {
     std::vector<std::string> wordList = {"hot", "dot", "dog", "lot", "log", "cog"};
@@ -169,5 +169,5 @@ int main(int argc, char **argv)
     std::cout << res.size() << std::endl;
     return 0;
 }
-*/
+
 // @lc code=end

@@ -66,7 +66,7 @@
 #include <set>
 #include <string>
 #include <vector>
-
+/*
 class Solution
 {
 public:
@@ -100,6 +100,8 @@ public:
         return;
     }
 };
+*/
+
 /*
 void printList(const std::vector<std::string> &_StrList)
 {

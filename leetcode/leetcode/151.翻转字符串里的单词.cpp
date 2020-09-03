@@ -65,14 +65,30 @@ class Solution
 public:
     std::string reverseWords(std::string s)
     {
-        if (s.size() < 1)
-            return s;
-        int begin(0), end(s.size() - 1);
-        while (s[begin] == ' ')
-            begin++;
-        while (end < s.size())
-        {
+        if (s.size() < 1) return s;
+        std::string tmpStr;
+        std::string res;
+        for (int i = 0; i < s.size(); i++) {
+            if (s[i] == ' ') {
+                if (tmpStr.size()) {
+                    if (res.size() < 1) res = tmpStr;
+                    else res = tmpStr + " " + res;
+                    tmpStr.clear();
+                }
+            } else tmpStr += s[i];
         }
+        if (tmpStr.size()) {
+            if (res.size()) res = tmpStr + " " + res;
+            else res = tmpStr;
+        }
+        return res;
     }
 };
+/*
+int main(int argc, char** argv) {
+    std::string str = "the sky is blue";
+    std::cout << "1"<< Solution().reverseWords(str) << "1" << std::endl;
+    return 0;
+}
+*/
 // @lc code=end

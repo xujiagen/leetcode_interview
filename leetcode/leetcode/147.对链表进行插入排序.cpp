@@ -55,6 +55,7 @@
  * };
  */
 #include <iostream>
+#include <vector>
 
 struct ListNode
 {
@@ -62,7 +63,7 @@ struct ListNode
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-
+/*
 class Solution
 {
 public:
@@ -86,4 +87,5 @@ public:
         }
     }
 };
+*/
 // @lc code=end
