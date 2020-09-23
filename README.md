@@ -1,35 +1,9 @@
 # leetcode interview
-研究方向是slam, 主要实习经历围绕lidar-slam, 但是也在尽快补足短板,提高visual-slam方向的能力
+```
+主要还是刷题为主， 之前做的一些项目不方便开源，最近有想法开源相关slam框架，写写论文
 
-代码里面有很多不规范code,后面重新刷题的时候会修改之前的错误，整体按照谷歌代码规范进行命名
-开始准备找实习了，开始刷[leetcode](https://leetcode-cn.com/problemset/all/)   
-剑指offer可以在牛客网上面在线刷题:[牛客网_剑指offer](https://www.nowcoder.com/ta/coding-interviews)
-
-### 剑指offer  
+主要研究方向是slam,熟悉主流的lidar-slam代码框架和visual-slam代码框架
+有从零开始按照项目要求开发新的slam代码框架的能力
 ```
-剑指offer已经刷了三遍了,原书的顺序,牛客网的顺序都有
-```
-### leetcode
-```
-暂时刷题到前150题,建议通过vscode的leetcode插件进行刷题
-```
-### 笔试(时间顺序)
-##### 驭势科技 
-```
-基于链表的快排
-```
-##### 地平线
-```
-剑指offer中的四题
-```
-##### momenta
-```
-给一个cmakelists工程,实现给定的功能
-```
-##### 阿里
-```
-```
-##### 美团
-##### 百度
-##### 华为
-##### 小马智行
+#### 代码规范部分参考google-c++-代码规范
+[google-c++代码规范](https://zh-google-styleguide.readthedocs.io/en/latest/)
