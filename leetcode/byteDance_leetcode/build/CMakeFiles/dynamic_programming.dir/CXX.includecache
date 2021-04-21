@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xujiiagen/project/leetcode_interview/leetcode/byteDance_leetcode/最长公共前缀.cpp
+algorithm
+-
+iostream
+-
+

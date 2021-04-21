@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xujiiagen/project/leetcode_interview/leetcode/leetcode/54.螺旋矩阵.cpp
+algorithm
+-
+iostream
+-
+vector
+-
+

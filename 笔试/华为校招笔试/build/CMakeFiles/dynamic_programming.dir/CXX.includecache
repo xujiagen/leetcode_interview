@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xujiiagen/project/leetcode_interview/笔试/华为校招笔试/first.cpp
+iostream
+-
+vector
+-
+string
+-
+algorithm
+-
+climits
+-
+

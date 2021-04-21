@@ -40,39 +40,49 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-/*
+
 struct ListNode
 {
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-*/
-class Solution
-{
+
+// class Solution
+// {
+// public:
+//     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
+//     {
+//         if (!l1)
+//             return l2;
+//         if (!l2)
+//             return l1;
+//         int addUp = 0;
+//         ListNode *first(l1), *second(l2);
+//         ListNode *top = new ListNode(0);
+//         ListNode *copy(top);
+//         while (first || second || addUp)
+//         {
+//             int tmpValue = (first ? first->val : 0) + (second ? second->val : 0) + addUp;
+//             copy->next = new ListNode(tmpValue % 10);
+//             copy = copy->next;
+//             addUp = tmpValue / 10;
+//             if (first)
+//                 first = first->next;
+//             if (second)
+//                 second = second->next;
+//         }
+//         return top->next;
+//     }
+// };
+
+class Solution {
 public:
-    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
-    {
-        if (!l1)
-            return l2;
-        if (!l2)
-            return l1;
-        int addUp = 0;
-        ListNode *first(l1), *second(l2);
-        ListNode *top = new ListNode(0);
-        ListNode *copy(top);
-        while (first || second || addUp)
-        {
-            int tmpValue = (first ? first->val : 0) + (second ? second->val : 0) + addUp;
-            copy->next = new ListNode(tmpValue % 10);
-            copy = copy->next;
-            addUp = tmpValue / 10;
-            if (first)
-                first = first->next;
-            if (second)
-                second = second->next;
-        }
-        return top->next;
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        if (!l1) return l2;
+        if (!l2) return l1;
+        ListNode* first = l1, *second = l2;
+        
     }
-};
+}
 // @lc code=end

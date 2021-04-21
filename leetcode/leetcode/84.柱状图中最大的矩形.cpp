@@ -42,6 +42,7 @@
 #include <algorithm>
 #include <vector>
 #include <iostream>
+#include <stack>
 /*
 class Solution
 {
@@ -67,6 +68,7 @@ public:
 };
 */
 
+/*
 class Solution
 {
 public:
@@ -91,6 +93,7 @@ public:
         return ans;
     }
 };
+*/
 /*
 int main(int argc, char **argv)
 {
@@ -100,4 +103,62 @@ int main(int argc, char **argv)
     return 0;
 }
 */
+
+/*
+class Solution {
+public:
+    int largestRectangleArea(std::vector<int> &heights) {
+        if (heights.empty()) return 0;
+        int maxArea = 0;
+        for (int i = 0; i < heights.size(); i++) {
+            int left = i, right = i;
+            while (left - 1>= 0 && heights[left - 1] >= heights[i]) left--;
+            while (right + 1 < heights.size() && heights[right + 1] >= heights[i]) right++;
+            maxArea = std::max(maxArea, heights[i] * (right - left + 1));
+        }
+        return maxArea;
+    }
+};
+*/
+
+class Solution {
+public:
+    int largestRectangleArea(std::vector<int> &heights) {
+        if (heights.empty()) return 0;
+        heights.insert(heights.begin(), 0);
+        heights.push_back(0);
+        std::stack<int> stackList;
+        std::stack<int> valueList;
+        int maxArea = 0;
+        for (int i = 0; i < heights.size(); i++) {
+            if (stackList.size() < 1) {
+                stackList.push(i);
+                valueList.push(heights[i]);
+                continue;
+            }
+            if (heights[stackList.top()] <= heights[i]) {
+                stackList.push(i);
+                valueList.push(heights[i]);
+                continue;
+            } else {
+                while (stackList.size() && heights[stackList.top()] > heights[i]) {
+                    //maxArea = std::max(maxArea, heights[stackList.top()] * (i - stackList.top()));
+                    int stackLeft = stackList.top();
+                    stackList.pop();
+                    valueList.pop();
+                    maxArea = std::max(maxArea, heights[stackLeft] * (i - stackList.top() - 1));
+                }
+                stackList.push(i);
+                valueList.push(heights[i]);
+            }
+        }
+        return maxArea;
+    }
+};
+
+int main(int argc, char** argv) {
+    std::vector<int> vecList = {2, 1, 5, 6, 2, 3};
+    std::cout << Solution().largestRectangleArea(vecList) << std::endl;
+    return 0;
+}
 // @lc code=end

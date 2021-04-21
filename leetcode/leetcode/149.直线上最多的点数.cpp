@@ -52,6 +52,7 @@
 #include <string>
 #include <unordered_map>
 
+/*
 class Solution
 {
 public:
@@ -102,6 +103,28 @@ public:
             b = temp;
         }
         return a;
+    }
+};
+*/
+
+class Solution {
+public:
+    int maxPoints(std::vector<std::vector<int>> &points) {
+        if (points.size() < 3)  return points.size();
+        int max = 0;
+        //std::unordered_map<double, int> divideIndex;
+        for (int i = 0; i < points.size(); i++) {
+            std::unordered_map<double, int> kValueCount;
+            int duplication = 0;
+            for (int j = i + 1; j < points.size(); j++) {
+                int kUp = points[j][1] - points[i][1];
+                int kDown = points[j][0] - points[i][0];
+                if (kUp == 0 && kDown == 0) {
+                    duplication++;
+                    continue;
+                } 
+            }  
+        }
     }
 };
 /*

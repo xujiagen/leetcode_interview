@@ -11,7 +11,8 @@
 #include <iostream>
 #include <unordered_map>
 #include <climits>
-
+#include <queue>
+/*
 class Solution {
 public:
     std::vector<int> maxSlidingWindow(std::vector<int>& nums, int k) {
@@ -50,6 +51,25 @@ public:
             }
         }
         return res;
+    }
+};
+*/
+class Solution {
+    std::vector<int> maxSlidingWindow(std::vector<int> &nums, int k) {
+        std::vector<int> res;
+        std::queue<int> queueList;
+        int tmpMax = nums[0];
+        for (int i = 0; i < nums.size(); ++i) {
+            if (i < k) {
+                queueList.push(nums[i]);
+                tmpMax = std::max(tmpMax, nums[i]);
+                if (i == k) {
+                    res.push_back(tmpMax);
+                    continue;
+                }
+            }
+            
+        }
     }
 };
 

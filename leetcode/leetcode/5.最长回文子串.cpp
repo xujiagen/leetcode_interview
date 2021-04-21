@@ -40,29 +40,40 @@ public:
     }
 };
 */
+
 class Solution {
-    public:
+public:
     std::string longestPalindrome(std::string s) {
-        
-    }
-    int palindrome(std::string &s, int first, int second) {
-        while (first >= 0 && second < s.size()) {
-            if (s[first] != s[second]) {
-                return second - first + 1;
-            } else {
-                first--, second++;
-            }
+        longestSubString = "";
+        subStrLength = 0;
+        for (int i = 0; i < s.size(); i++) {
+            palindrom(s, i, i);
+            palindrom(s, i, i + 1);
         }
-        return second - first + 1;
+        return longestSubString;
     }
+
+    void palindrom(const std::string &s, int first, int second) {
+        int maxLength = 0;
+        while (first >= 0 && second < s.size() && s[first] == s[second]) {
+            maxLength = second - first + 1;
+            if (maxLength > subStrLength) {
+                subStrLength = maxLength;
+                longestSubString = s.substr(first, second - first + 1);
+            }
+            first--;
+            second++;
+        }
+    }
+    std::string longestSubString;
+    int subStrLength;
 };
 
-/*
 int main(int argc, char** argv) {
-    std::string str("babad");
+    std::string str("cbbd");
     std::cout << Solution().longestPalindrome(str) << std::endl; 
     return 0;
 }
-*/
+
 // @lc code=end
 
