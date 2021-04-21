@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.out",
+            "program": "/home/xujiiagen/project/leetcode_interview/leetcode/leetcode/build/dynamic_programming",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
